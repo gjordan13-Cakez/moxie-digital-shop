@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moxie Digital Shop — Elegant Templates &amp; Digital Downloads</title>
+<meta name="description" content="Elegant resume templates, client onboarding kits, and planners — instant digital downloads from Moxie Digital Shop.">
+<link rel="icon" href="images/submark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #F6F1E8;
+    --ivory-deep: #EFE8DA;
+    --espresso: #2C2620;
+    --champagne: #A98F6B;
+    --sand: #D8CBB2;
+    --stone: #8C8377;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ivory);
+    color: var(--espresso);
+    font-family: "Montserrat", "Avenir Next", Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+
+  .serif { font-family: "Cormorant Garamond", "Cochin", Georgia, serif; }
+
+  /* ---------- header ---------- */
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px clamp(20px, 5vw, 56px);
+    border-bottom: 1px solid var(--sand);
+    position: sticky; top: 0; background: var(--ivory); z-index: 10;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .brand img { width: 44px; height: 44px; }
+  .brand-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 20px; letter-spacing: 0.32em; font-weight: 500;
+  }
+  .brand-name small {
+    display: block; font-family: "Montserrat", sans-serif;
+    font-size: 9px; letter-spacing: 0.42em; color: var(--champagne);
+    font-weight: 500; margin-top: 2px; white-space: nowrap;
+  }
+  nav { display: flex; gap: clamp(16px, 3vw, 36px); }
+  nav a {
+    text-decoration: none; font-size: 12px; letter-spacing: 0.18em;
+    text-transform: uppercase; font-weight: 400; color: var(--espresso);
+    padding-bottom: 3px; border-bottom: 1px solid transparent;
+    transition: border-color 0.25s, color 0.25s;
+  }
+  nav a:hover { border-color: var(--champagne); color: var(--champagne); }
+
+  /* ---------- hero ---------- */
+  .hero {
+    text-align: center;
+    padding: clamp(70px, 11vw, 130px) 24px clamp(60px, 9vw, 110px);
+  }
+  .hero-eyebrow {
+    font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--champagne); font-weight: 500; margin-bottom: 26px;
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 400; font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.12; letter-spacing: 0.02em; max-width: 17em;
+    margin: 0 auto 24px; text-wrap: balance;
+  }
+  h1 em { font-style: italic; }
+  .hero p {
+    max-width: 54ch; margin: 0 auto 40px; color: var(--stone); font-size: 16px;
+  }
+  .btn {
+    display: inline-block; text-decoration: none;
+    font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase;
+    font-weight: 500; padding: 16px 42px;
+    background: var(--espresso); color: var(--ivory);
+    border: 1px solid var(--espresso);
+    transition: background 0.25s, color 0.25s;
+  }
+  .btn:hover { background: transparent; color: var(--espresso); }
+  .btn.ghost { background: transparent; color: var(--espresso); }
+  .btn.ghost:hover { background: var(--espresso); color: var(--ivory); }
+
+  .rule { width: 72px; height: 1px; background: var(--champagne); margin: 0 auto; }
+
+  /* ---------- shop ---------- */
+  .section { padding: clamp(60px, 8vw, 100px) clamp(20px, 5vw, 56px); }
+  .section-head { text-align: center; margin-bottom: clamp(40px, 6vw, 64px); }
+  .section-head .rule { margin-bottom: 26px; }
+  h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 400; font-size: clamp(30px, 4vw, 42px); letter-spacing: 0.03em;
+  }
+  .section-head p { color: var(--stone); max-width: 56ch; margin: 14px auto 0; }
+
+  .products {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: clamp(24px, 4vw, 48px); max-width: 920px; margin: 0 auto;
+  }
+  @media (max-width: 860px) { .products { grid-template-columns: 1fr; max-width: 460px; } }
+  .card { text-decoration: none; display: flex; flex-direction: column; }
+  .card-img {
+    aspect-ratio: 4 / 3; overflow: hidden; background: var(--ivory-deep);
+    border: 1px solid var(--sand);
+  }
+  .card-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .card:hover .card-img img { transform: scale(1.035); }
+  .card h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500; font-size: 23px; margin: 20px 0 6px; letter-spacing: 0.02em;
+  }
+  .card .kind {
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--champagne); font-weight: 500; margin-bottom: 8px;
+  }
+  .card p { color: var(--stone); font-size: 14px; margin-bottom: 14px; }
+  .card .cta {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    font-weight: 500; color: var(--espresso);
+    border-bottom: 1px solid var(--champagne); align-self: flex-start;
+    padding-bottom: 3px;
+  }
+  .shop-note { text-align: center; color: var(--stone); font-size: 14px; margin-top: 48px; }
+  .shop-note a { color: var(--champagne); }
+
+  /* ---------- why ---------- */
+  .why { background: var(--espresso); color: var(--ivory); }
+  .why h2 { color: var(--ivory); }
+  .why .rule { background: var(--champagne); }
+  .why-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: clamp(28px, 4vw, 56px); max-width: 1080px; margin: 0 auto; text-align: center;
+  }
+  @media (max-width: 760px) { .why-grid { grid-template-columns: 1fr; max-width: 420px; } }
+  .why-item h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500; font-size: 22px; letter-spacing: 0.04em; margin-bottom: 10px;
+  }
+  .why-item .num {
+    font-family: "Cormorant Garamond", Georgia, serif; font-style: italic;
+    color: var(--champagne); font-size: 30px; display: block; margin-bottom: 14px;
+  }
+  .why-item p { color: #C9BFAF; font-size: 14.5px; }
+
+  /* ---------- about ---------- */
+  .about { text-align: center; }
+  .about-inner { max-width: 620px; margin: 0 auto; }
+  .about img { width: 74px; margin: 0 auto 28px; border-radius: 50%; }
+  .about p { color: var(--stone); margin-bottom: 16px; }
+  .about p.lead {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 24px; font-style: italic; color: var(--espresso); line-height: 1.4;
+  }
+
+  /* ---------- footer ---------- */
+  footer {
+    background: var(--ivory-deep); border-top: 1px solid var(--sand);
+    text-align: center; padding: 48px 24px 40px;
+  }
+  .footer-brand {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 18px; letter-spacing: 0.32em; font-weight: 500; margin-bottom: 16px;
+  }
+  .footer-links { display: flex; justify-content: center; gap: 28px; margin-bottom: 22px; }
+  .footer-links a {
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    text-decoration: none; color: var(--stone); font-weight: 400;
+  }
+  .footer-links a:hover { color: var(--champagne); }
+  .copyright { font-size: 12px; color: var(--stone); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="#top">
+    <img src="images/submark.png" alt="Moxie Digital Shop monogram">
+    <span class="brand-name">MOXIE<small>DIGITAL SHOP</small></span>
+  </a>
+  <nav>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="https://www.etsy.com/shop/MoxieDigitalShop" target="_blank" rel="noopener">Etsy</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <p class="hero-eyebrow">Templates · Planners · Digital Downloads</p>
+    <h1>Elegant templates for work that <em>speaks softly</em> — and lands loudly.</h1>
+    <p>Thoughtfully designed resume kits, client onboarding suites, and planners for people building something of their own. Instant download, editable in the tools you already use.</p>
+    <a class="btn" href="#shop">Browse the Collection</a>
+  </section>
+
+  <section class="section" id="shop">
+    <div class="section-head">
+      <div class="rule"></div>
+      <h2>The Collection</h2>
+      <p>Every piece is designed to look like it came from a boutique studio — because it did.</p>
+    </div>
+    <div class="products">
+      <a class="card" href="https://www.etsy.com/shop/MoxieDigitalShop" target="_blank" rel="noopener">
+        <div class="card-img"><img src="images/margaux.png" alt="The Margaux resume template flat lay"></div>
+        <p class="kind">Resume Template Set</p>
+        <h3>The Margaux</h3>
+        <p>A five-page minimalist resume, cover letter &amp; references kit — editable in Canva, Word, and Google Docs. Bonus icons and interview prep guide included.</p>
+        <span class="cta">View on Etsy</span>
+      </a>
+      <a class="card" href="https://www.etsy.com/shop/MoxieDigitalShop" target="_blank" rel="noopener">
+        <div class="card-img"><img src="images/freelance_bundle.jpg" alt="Freelance client onboarding bundle on laptop and tablet"></div>
+        <p class="kind">Client Experience Kit</p>
+        <h3>Freelance Onboarding Bundle</h3>
+        <p>A 55-page client onboarding and project management suite — welcome kits, payment schedules, timelines, and wrap-up documents that make you look established.</p>
+        <span class="cta">View on Etsy</span>
+      </a>
+    </div>
+    <p class="shop-note">Plus watercolor clipart collections, wedding planning spreadsheets, and new releases every month — <a href="https://www.etsy.com/shop/MoxieDigitalShop" target="_blank" rel="noopener">see everything in the shop</a>.</p>
+  </section>
+
+  <section class="section why">
+    <div class="section-head">
+      <div class="rule"></div>
+      <h2>The Moxie Difference</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="num">i.</span>
+        <h3>Instant Download</h3>
+        <p>Purchase today, start using it five minutes from now. Nothing ships, nothing waits.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">ii.</span>
+        <h3>Edit It Your Way</h3>
+        <p>Canva, Microsoft Word, or Google Docs — no design skills or paid software required.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">iii.</span>
+        <h3>Designed With Care</h3>
+        <p>Clean structure, generous white space, and typography chosen the way a stationer would.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="about-inner">
+      <img src="images/submark.png" alt="Moxie monogram">
+      <p class="lead">&ldquo;Moxie&rdquo; means nerve — the quiet confidence to build something of your own.</p>
+      <p>Moxie Digital Shop makes elegant, practical templates for job seekers, freelancers, and creators. Every download is designed to help you show up polished — in the inbox, in the interview, and in front of your clients.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="footer-brand">MOXIE DIGITAL SHOP</p>
+  <div class="footer-links">
+    <a href="https://www.etsy.com/shop/MoxieDigitalShop" target="_blank" rel="noopener">Etsy</a>
+    <a href="https://www.pinterest.com/MoxieDigitalShop" target="_blank" rel="noopener">Pinterest</a>
+    <a href="mailto:gjordan13@gmail.com">Contact</a>
+  </div>
+  <p class="copyright">&copy; 2026 Moxie Digital Shop. All downloads are for personal use.</p>
+</footer>
+
+</body>
+</html>
